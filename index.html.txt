@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rhinoplasty AI</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
+        input[type="file"] { margin-bottom: 20px; }
+        img { width: 300px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Rhinoplasty AI</h1>
+    <p>Upload a photo to see rhinoplasty alterations!</p>
+    
+    <!-- Form to upload image -->
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" accept="image/*">
+        <br>
+        <button type="submit">Upload Photo</button>
+    </form>
+
+    {% if modified_image %}
+    <h2>Modified Image:</h2>
+    <img src="{{ modified_image }}" alt="Modified Nose">
+    {% endif %}
+</body>
+</html>
